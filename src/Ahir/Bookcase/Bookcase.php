@@ -2,7 +2,6 @@
 
 use Exception;
 use Pathman;
-use Debugbar;
 
 class Bookcase {
 
@@ -127,7 +126,6 @@ class Bookcase {
 			// Checking image status
 			$stream = imagecreatefromstring(file_get_contents($file->getRealPath()));		
 			// Yes, this is a image file.
-			Debugbar::info('File Type: jpeg');
 			$this->fileType = 'jpg';
 			ImageSecurity::control(
 					$file, 
@@ -135,9 +133,7 @@ class Bookcase {
 				);
 		} catch (Exception $e) {
 			if (strpos($e->getMessage(), 'imagecreatefromstring') !== false) {
-				Debugbar::info('File Type: zip');
 			} else {
-				Debugbar::error($e->getMessage());
 				throw new Exception($e->getMessage());
 			}
 			// File Security
