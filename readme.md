@@ -9,7 +9,7 @@ To install through composer, simply put the following in your `composer.json` fi
 ```json
 {
 	"require-dev": {
-		"ahir/pathman": "v1.1"
+		"ahir/bookcase": "v1.1"
 	}
 }
 ```
