@@ -17,12 +17,9 @@
     "require": {
         "php": ">=5.3.0",
         "illuminate/support": "4.1.*",
-        "ahir/pathman": "v1.0"
+        "ahir/pathman": "v1.1"
     },
     "autoload": {
-        "classmap": [
-            "src/migrations"
-        ],
         "psr-0": {
             "Ahir\\Bookcase\\": "src/"
         }
