@@ -20,6 +20,16 @@ In the $providers array add the following service provider for this package.
 
 ```php
 'Ahir\Bookcase\BookcaseServiceProvider',
+'Ahir\Pathman\PathmanServiceProvider',
+```
+
+Add the `Bookcase` and  `Pathman` facades to the `aliases` array in `app/config/app.php`:
+
+```php
+'aliases' => array(
+		'Bookcase' => 'Ahir\Bookcase\Facades\Bookcase',
+		'Pathman' => 'Ahir\Pathman\Facades\Pathman',
+	),
 ```
 
 ### Configuration
