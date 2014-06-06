@@ -10,7 +10,7 @@ return array(
     /**
     * Library Path
     */
-    'libraryPath' => 'public/library/',
+    'libraryPath' => 'public_html/library/',
     
     /**
     * Temp Path

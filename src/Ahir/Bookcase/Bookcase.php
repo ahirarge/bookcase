@@ -155,7 +155,7 @@ class Bookcase {
 		return (object) array(
 				'type' => $this->fileType,
 				'size' => $this->fileSize,
-				'path' => str_replace('../public/', '', $this->getName())
+				'path' => str_replace('../public_html/', '', $this->getName())
 			);
 	}
 
