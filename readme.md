@@ -63,3 +63,7 @@ try {
 	echo 'Error: ' . $e->getMessage();
 }		
 ```
+
+### Dependencies
+
+* `ahir/pathman`
