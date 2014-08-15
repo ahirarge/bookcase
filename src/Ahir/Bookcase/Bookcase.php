@@ -2,6 +2,7 @@
 
 use Exception;
 use Pathman;
+use Security\SecurityInterface;
 
 class Bookcase {
 
@@ -19,6 +20,19 @@ class Bookcase {
 	* File Size
 	*/
 	protected $fileSize = 0;
+
+	/**
+	 * Construct
+	 *
+	 * @param  SecurityInterface 	$fileSecurity
+	 * @param  SecurityInterface 	$imageSecurity
+	 * @return null
+	 */
+	public function __construct($fileSecurity, $imageSecurity)
+	{
+		$this->fileSecurity = $fileSecurity;
+		$this->imageSecurity = $imageSecurity;
+	}	
 
 	/**
 	* Security
@@ -127,10 +141,11 @@ class Bookcase {
 			$stream = imagecreatefromstring(file_get_contents($file->getRealPath()));		
 			// Yes, this is a image file.
 			$this->fileType = 'jpg';
-			ImageSecurity::control(
+			$this->imageSecurity
+				 ->control(
 					$file, 
 					$this->getName('jpg')
-				);
+				 );
 		} catch (Exception $e) {
 			if (strpos($e->getMessage(), 'imagecreatefromstring') !== false) {
 			} else {
@@ -138,10 +153,11 @@ class Bookcase {
 			}
 			// File Security
 			$this->fileType = 'zip';
-			FileSecurity::control(
+			$this->fileSecurity
+				 ->control(
 					$file, 
 					$this->getName('zip')
-				);
+				 );
 		} 
 	}
 

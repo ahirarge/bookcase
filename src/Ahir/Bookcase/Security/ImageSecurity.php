@@ -1,14 +1,16 @@
-<?php namespace Ahir\Bookcase;
+<?php namespace Ahir\Bookcase\Security;
+
+use Exception;
 
 class ImageSecurity implements SecurityInterface {
 
 	/**
-	* Control
-	*
-	* @param  string $file
-	* @param  string $tempName
-	* @return null
-	*/
+	 * Control 
+	 *
+	 * @param  string 	$file
+	 * @param  string 	$tempName
+	 * @return null
+	 */
 	public static function control($file, $tempName)
 	{
         // Ger Image Sizes

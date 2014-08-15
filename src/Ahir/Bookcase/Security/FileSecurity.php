@@ -1,6 +1,6 @@
-<?php namespace Ahir\Bookcase;
+<?php namespace Ahir\Bookcase\Security;
 
-use ZipArchive;
+use ZipArchive, Exception;
 
 class FileSecurity implements SecurityInterface {
 
