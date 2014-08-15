@@ -2,13 +2,13 @@
 
 interface SecurityInterface {
 
-	/**
-	 * Control 
-	 *
-	 * @param  string 	$file
-	 * @param  string 	$tempName
-	 * @return null
-	 */
-	public static function control($file, $tempName);
+    /**
+     * Control 
+     *
+     * @param  string   $file
+     * @param  string   $tempName
+     * @return null
+     */
+    public static function control($file, $tempName);
 
 }
